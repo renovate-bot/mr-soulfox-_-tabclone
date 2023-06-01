@@ -1,0 +1,40 @@
+{
+	"name": "tabclone",
+	"version": "1.0.0",
+	"description": "TabNews with some modifications.",
+	"engines": {
+		"node": ">=18.16.0",
+		"pnpm": ">=8.6.0"
+	},
+	"private": true,
+	"scripts": {
+		"clean": "rm -rf -d ./dist",
+		"typecheck": "tsc --noEmit",
+		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+		"lint-fix": "eslint --fix",
+		"staged": "lint-staged",
+		"prepare": "husky install",
+      "dev:server": "pnpm --filter @tabclone/server dev:watch",
+      "dev:client": "pnpm --filter @tabclone/client dev:watch",
+      "build:server": "pnpm clean && pnpm --filter @tabclone/server build",
+      "build:client": "pnpm clean && pnpm --filter @tabclone/client build",
+      "lint:server": "pnpm --filter @tabclone/server lint",
+      "lint:client": "pnpm --filter @tabclone/client lint"
+	},
+	"author": "Marcos Paulo <mr-soulfox>",
+	"license": "MIT",
+	"dependencies": {
+		"@types/node": "^20.2.5",
+		"@typescript-eslint/eslint-plugin": "^5.59.8",
+		"@typescript-eslint/parser": "^5.59.8",
+		"eslint": "^8.41.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.2",
+		"prettier": "^2.8.8",
+		"tsx": "^3.12.7",
+		"typescript": "^5.1.3"
+	}
+}

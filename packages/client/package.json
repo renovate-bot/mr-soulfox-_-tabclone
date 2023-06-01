@@ -1,0 +1,9 @@
+{
+  "name": "@tabclone/client",
+  "version": "1.0.0",
+  "scripts": {
+   "dev:watch": "tsx watch ./src/index.ts",
+   "dev": "tsx ./src/index.ts",
+   "lint": "eslint ./src --ext .ts --fix"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@tabclone/server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:watch": "tsx watch ./src/index.ts",
+    "dev": "tsx ./src/index.ts",
+    "lint": "eslint ./src --ext .ts --fix"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
