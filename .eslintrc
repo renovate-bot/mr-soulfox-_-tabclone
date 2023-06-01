@@ -6,11 +6,27 @@
      "plugin:prettier/recommended"
    ],
    "parser": "@typescript-eslint/parser",
-   "plugins": ["@typescript-eslint", "prettier"],
+   "plugins": ["@typescript-eslint", "prettier", "@typescript-eslint/eslint-plugin"],
    "rules": {
      "prettier/prettier": "error",
-     "@typescript-eslint/indent": ["error", 3],
+     "class-methods-use-this": "off",
+     "no-useless-constructor": "off",
+     "no-empty-function": "off",
+     "no-console": "off",
+     "@typescript-eslint/indent": ["off"],
      "@typescript-eslint/no-unused-vars": "error",
-     "@typescript-eslint/no-explicit-any": "error"
-   }
+     "@typescript-eslint/no-explicit-any": "error",
+     "@typescript-eslint/explicit-module-boundary-types": "off",
+     "@typescript-eslint/explicit-function-return-type": "off",
+     "@typescript-eslint/interface-name-prefix": "off",
+     "import/no-extraneous-dependencies": "off",
+     "import/no-unresolved": "off",
+     "import/prefer-default-export": "off"
+   },
+   "root": true,
+   "env": {
+      "node": true,
+      "jest": true
+    },
+    "ignorePatterns": [".eslintrc", ".eslintrc.js"]
 }

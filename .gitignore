@@ -6,3 +6,4 @@ build
 .env.*
 .husky/_
 *.txt
+coverage

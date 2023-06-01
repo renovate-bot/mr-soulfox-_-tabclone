@@ -1,7 +1,7 @@
 {
-  "name": "@tabclone/shared",
-  "version": "1.0.0",
-  "scripts": {
-    "test": "none here"
-  }
+	"name": "@tabclone/shared",
+	"version": "1.0.0",
+	"scripts": {
+		"test": "none here"
+	}
 }
