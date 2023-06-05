@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "nest build",
 		"dev": "nest start",
-		"dev:watch": "nest start --watch",
+		"dev:watch": "nest build --webpack --webpackPath webpack-hmr.config.js --watch",
 		"dev:debug": "nest start --debug --watch",
 		"start": "node dist/main",
 		"test": "jest",
@@ -20,8 +20,19 @@
 		"@nestjs/config": "^2.3.2",
 		"@nestjs/core": "^9.0.0",
 		"@nestjs/platform-express": "^9.0.0",
+		"@nestjs/swagger": "^6.3.0",
+		"@nestjs/terminus": "^9.2.2",
+		"@prisma/client": "4.15.0",
+		"@types/crypto-js": "^4.1.1",
+		"class-transformer": "^0.5.1",
+		"class-validator": "^0.14.0",
+		"crypto-js": "^4.1.1",
+		"prisma": "^4.15.0",
 		"reflect-metadata": "^0.1.13",
-		"rxjs": "^7.2.0"
+		"run-script-webpack-plugin": "^0.2.0",
+		"rxjs": "^7.2.0",
+		"webpack": "^5.85.0",
+		"webpack-node-externals": "^3.0.0"
 	},
 	"devDependencies": {
 		"@nestjs/cli": "^9.0.0",

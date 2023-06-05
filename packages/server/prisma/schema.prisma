@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+   provider = "prisma-client-js"
+}
+
+datasource db {
+   provider = "postgresql"
+   url      = env("DATABASE_URL")
+}
+
+model User {
+   id        String     @id @unique @default(uuid())
+   isAnon    Boolean    @default(false) @map("is_anon")
+   anonymous Anonymous?
+}
+
+model Anonymous {
+   anonId      String    @id @unique @map("anon_id")
+   token       String    @unique
+   firstAccess DateTime  @default(now()) @map("first_access")
+   platform    Platform  @default(DESKTOP)
+   utmSource   UtmSource @default(SEARCH) @map("utm_source")
+
+   userAnon User @relation(fields: [anonId], references: [id])
+}
+
+enum Platform {
+   DESKTOP
+   MOBILE
+}
+
+enum UtmSource {
+   SEARCH
+   SOCIAL
+   TABNEWS
+   GITHUB
+}
